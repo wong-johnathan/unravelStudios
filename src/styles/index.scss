@@ -1,5 +1,5 @@
-$primary: #4c65a5;
-$secondary: #6576a2;
+$primary: #f43582;
+$secondary: #ff5f9f;
 $noBg: #00000000;
 $enable-shadows: true;
 
@@ -13,4 +13,18 @@ body {
   .navbar-collapse {
     background-color: $secondary;
   }
+  .rootItemLink {
+    padding: 8px 0px !important;
+  }
+}
+table tr td.actionColumn button {
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+table tr td {
+  vertical-align: middle !important;
+}
+
+.pointer {
+  cursor: pointer;
 }

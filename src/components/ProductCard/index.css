@@ -1,0 +1,14 @@
+.productBox:hover {
+  border-width: 2px;
+  border-color: #f435816e;
+  cursor: pointer;
+}
+
+.productBox img {
+  transition: none;
+}
+.productBox:hover img {
+  transform: scale(1.1);
+  filter: contrast(0.7);
+  transition: all 0.3s ease-in;
+}

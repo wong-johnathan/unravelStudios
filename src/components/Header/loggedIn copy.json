@@ -1,0 +1,21 @@
+[
+  { "link": "/", "text": "Shop" },
+  {
+    "type": "menu",
+    "text": "My Products",
+    "items": [
+      { "link": "/product", "text": "View All" },
+      { "link": "/product/edit/new", "text": "Add New" }
+    ]
+  },
+  {
+    "link": "/categories",
+    "text": "My Categories",
+    "type": "menu",
+    "items": [
+      { "link": "/categories", "text": "View All" },
+      { "link": "/categories/new", "text": "Add New" }
+    ]
+  },
+  { "link": "/signout", "text": "Signout" }
+]

@@ -1,0 +1,12 @@
+[
+  { "link": "/", "text": "Shop" },
+  {
+    "type": "menu",
+    "text": "My Products",
+    "items": [
+      { "link": "/product", "text": "View All" },
+      { "link": "/product/edit/new", "text": "Add New" }
+    ]
+  },
+  { "link": "/signout", "text": "Signout" }
+]

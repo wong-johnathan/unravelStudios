@@ -1,0 +1,13 @@
+.rightColumn {
+  background: linear-gradient(rgb(103, 144, 100), rgb(46, 70, 132));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.rightColumn img {
+  filter: grayscale(1) brightness(10);
+  width: 70%;
+}

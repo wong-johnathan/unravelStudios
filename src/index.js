@@ -8,9 +8,11 @@ import thunk from "redux-thunk";
 import reducer from "./store/reducers";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "styles/index.scss";
+import { init } from "store/actions/auth";
 
 const store = createStore(reducer, applyMiddleware(thunk));
 
+init();
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
