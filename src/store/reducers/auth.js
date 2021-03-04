@@ -2,6 +2,7 @@ import { SET_AUTH_USER, SET_AUTH_TOKEN, LOGOUT, UPDATE_AUTH_USER } from "constan
 
 const initialState = {
   token: localStorage.getItem("token"),
+  authUser:{  } 
 };
 
 const reducer = (state = initialState, actions) => {

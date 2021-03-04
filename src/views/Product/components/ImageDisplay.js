@@ -5,7 +5,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 const ImageDisplay = ({ images = [] }) => {
-  console.log(images);
   return (
     <div className='d-flex justify-content-center align-items-center border imageDisplay'>
       {images.length > 0 ? (

@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import logo from "assets/logo.svg";
+import logo from "assets/logo.png";
 import styles from "./index.module.css";
 
 const CustomCard = (props) => {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Navbar, Nav, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Collapse, NavbarToggler } from "reactstrap";
-import logo from "assets/logo.svg";
+import logo from "assets/logo.png";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import loggedIn from "./loggedIn.json";

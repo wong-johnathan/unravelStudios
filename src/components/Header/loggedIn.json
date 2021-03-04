@@ -1,12 +1,6 @@
 [
   { "link": "/", "text": "Shop" },
-  {
-    "type": "menu",
-    "text": "My Products",
-    "items": [
-      { "link": "/product", "text": "View All" },
-      { "link": "/product/edit/new", "text": "Add New" }
-    ]
-  },
+  { "link": "/checkout/cart", "text": "Cart" },
+  { "link": "/checkout/orders", "text": "Orders" },
   { "link": "/signout", "text": "Signout" }
 ]

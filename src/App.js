@@ -9,13 +9,12 @@ import Login from "views/Login";
 import Product from "views/Product";
 import Products from "views/Products";
 import Register from "views/Register";
-import ResetPassword from "views/ResetPassword";
-import EditMyProduct from "views/EditMyProduct";
 import Signout from "views/Signout";
-import MyProducts from "views/MyProducts";
 import Footer from "components/Footer";
 import Spacer from "components/Spacer";
 import { fetchUser } from "store/actions/auth";
+import Cart from "views/Cart";
+import Orders from "views/Orders";
 
 const App = ({ history, location }) => {
   const dispatch = useDispatch();
@@ -24,7 +23,6 @@ const App = ({ history, location }) => {
   useEffect(() => {
     if (auth.token) {
       if (location.pathname === "/login" || location.pathname === "/forgot-password" || location.pathname === "/register") history.push("/");
-
       if (!auth.authUser) dispatch(fetchUser());
     }
   }, [auth, history, location, dispatch]);
@@ -35,11 +33,9 @@ const App = ({ history, location }) => {
       <Switch>
         <Route path='/login' render={() => <Login />} />
         <Route path='/register' render={() => <Register />} />
-        <Route path='/reset-password' render={() => <ResetPassword />} />
-        {/* <Route path='/forgot-password' render={() => <ForgotPassword />} /> */}
-        <Route path='/product/edit/:id' render={() => <EditMyProduct />} />
-        <Route path='/product' render={() => <MyProducts />} />
         <Route path='/signout' render={() => <Signout />} />
+        <Route path='/checkout/cart' render={() => <Cart />} />
+        <Route path='/checkout/orders' render={()=><Orders/>}/>
         <Route path='/:id' render={() => <Product />} />
         <Route path='/' render={() => <Products />} />
       </Switch>

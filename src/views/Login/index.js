@@ -5,7 +5,9 @@ import Spacer from "components/Spacer";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "store/actions/auth";
-import logo from "assets/logo.svg";
+import logo from "assets/logo.png";
+import { open_modal } from "store/actions/modals";
+import { ERROR } from "constants/modals";
 
 const inputs = [
   { type: "email", id: "email", placeholder: "Input Email", label: "Email" },
@@ -18,8 +20,11 @@ const Login = () => {
   const updateState = (e) => setFields({ ...fields, [e.target.id]: e.target.value });
 
   const onSubmit = (e) => {
+    const { email, password } = fields;
     e.preventDefault();
-    dispatch(login({ email: fields.email, password: fields.password }));
+    if (email !== "biz.johnathanwongwh@gmail.com" && password !== "123456789")
+      return dispatch(open_modal({ type: ERROR, children: "The account doesn't exists or you have entered a wrong password!" }));
+    dispatch(login({ email, password }));
   };
   return (
     <Container style={{ maxWidth: 480, left: 0, right: 0, bottom: 0, top: 0 }} className='mx-auto position-absolute d-flex'>

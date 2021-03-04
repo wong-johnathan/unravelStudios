@@ -5,7 +5,6 @@ import Spacer from "components/Spacer";
 import React from "react";
 import { Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
-import Search from "./components/Search";
 import { useSelector } from "react-redux";
 
 const Products = () => {
@@ -13,10 +12,6 @@ const Products = () => {
   return (
     <>
       <CardHeader title='Products' />
-      <Spacer />
-      <CardComponent style={{ padding: 0 }}>
-        <Search />
-      </CardComponent>
       <Spacer />
       <CardComponent>
         <Row>

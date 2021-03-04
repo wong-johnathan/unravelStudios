@@ -1,7 +1,7 @@
 import React from "react";
 import { Input, Label, FormGroup, Row, Col, FormText } from "reactstrap";
 
-const Inputs = ({ value = "", id, label, updateState, placeholder, type, required = true, disabled = false, options = [], rows = 5, subText = "" }) => {
+const Inputs = ({ value = "", id, label, updateState, placeholder, type, required = true, disabled = false, options = [], rows = 5, subText = "", error='' }) => {
   const props = { type, id, placeholder, required, value, onChange: updateState, disabled };
   switch (type) {
     case "label":
@@ -23,6 +23,7 @@ const Inputs = ({ value = "", id, label, updateState, placeholder, type, require
             </Label>
           )}
           <Input {...props} rows={rows} />
+          {error && <FormText color='danger'>{error}</FormText>}
           {subText && <FormText color='muted'>{subText}</FormText>}
         </FormGroup>
       );

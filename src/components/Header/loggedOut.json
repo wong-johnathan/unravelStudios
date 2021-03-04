@@ -1,1 +1,5 @@
-[{ "link": "/", "text": "Shop" },{ "link": "/login", "text": "Login" }]
+[
+  { "link": "/", "text": "Shop" },
+  { "link": "/checkout/cart", "text": "Cart" },
+  { "link": "/login", "text": "Login" }
+]
