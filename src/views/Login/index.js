@@ -10,19 +10,19 @@ import { open_modal } from "store/actions/modals";
 import { ERROR } from "constants/modals";
 
 const inputs = [
-  { type: "email", id: "email", placeholder: "Input Email", label: "Email" },
-  { type: "password", id: "password", placeholder: "Input Password", label: "Password" },
+  { type: "email", id: "email", placeholder: "Input Email", label: "Email",value:"test@gmail.com" },
+  { type: "password", id: "password", placeholder: "Input Password", label: "Password",value:"123456789" },
 ];
 
 const Login = () => {
   const dispatch = useDispatch();
-  const [fields, setFields] = useState({});
+  const [fields, setFields] = useState({email:"test@gmail.com",password:"123456789"});
   const updateState = (e) => setFields({ ...fields, [e.target.id]: e.target.value });
 
   const onSubmit = (e) => {
     const { email, password } = fields;
     e.preventDefault();
-    if (email !== "biz.johnathanwongwh@gmail.com" && password !== "123456789")
+    if (email !== "test@gmail.com" && password !== "123456789")
       return dispatch(open_modal({ type: ERROR, children: "The account doesn't exists or you have entered a wrong password!" }));
     dispatch(login({ email, password }));
   };

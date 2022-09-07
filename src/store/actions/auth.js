@@ -5,7 +5,7 @@ const token = "someRandomJwtToken";
 
 export const fetchUser = () => async (dispatch) => {
   try {
-    const user = { email: "biz.johnathanwongwh@gmail.com", password: "123456789" };
+    const user = { email: "test@gmail.com", password: "123456789" };
     dispatch({ type: SET_AUTH_USER, payload: user });
   } catch (e) {
     console.log(e.message);
